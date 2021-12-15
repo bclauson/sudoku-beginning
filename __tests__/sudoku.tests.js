@@ -11,5 +11,10 @@ describe('sudoku', () => {
     console.log(reusableSudoku);
   })
 
+  test('Should see if checkRow returns true and false', () => {
+    let checkTest = reusableSudoku.checkRow(reusableSudoku.board[0],1);
+    expect(checkTest).toEqual(true);
+  });
+
 });
 

@@ -1,0 +1,50 @@
+const sudoku = [
+  [1,2,3,4,5,6,7,8,9],
+  [2,2,3,4,5,6,7,8,9],
+  [3,2,3,4,5,6,7,8,9],
+  [4,2,3,4,5,6,7,8,9],
+  [5,2,3,4,5,6,7,8,9],
+  [6,2,3,4,5,6,7,8,9],
+  [7,2,3,4,5,6,7,8,9],
+  [8,2,3,4,5,6,7,8,9],
+  [9,2,3,4,5,6,7,8,9],
+]
+
+// sudoku[row][col]
+
+const sudokuColChecker = (sudoku) => {
+for (i = 0; i < sudoku.length; i++){
+  let newSud =[];
+  for (j = 0; j < sudoku.length; j++) {
+    newSud.push(sudoku[j][i]);
+  }
+  console.log(newSud)
+  console.log(isArrayUnique(newSud))
+  }
+}
+function isArrayUnique(array) {
+  const set = new Set(array);
+  return set.size === array.length;
+}
+
+
+sudokuChecker(sudoku);
+
+
+// console.log(sudoku[0][0])
+// console.log(sudoku[1][0])
+
+// const sudokuChecker = (sudoku) => {
+// for (i = 0; i < sudoku.length; i++)
+//   sudoku[i].forEach(function(number, index){
+//     if (number === number){
+//       console.log(number)
+// }
+// });
+// }
+
+// sudokuChecker(sudoku);
+
+
+// console.log(isArrayUnique([1,2,3,4,5,6,7,8,9]));
+// console.log(isArrayUnique([1, 2, 2]));
