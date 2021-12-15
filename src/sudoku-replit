@@ -27,8 +27,19 @@ function isArrayUnique(array) {
   return set.size === array.length;
 }
 
+const sudokuRowChecker = (sudoku) => {
+for (i = 0; i < sudoku.length; i++){
+  console.log(sudoku[i])
+  console.log(isArrayUnique(sudoku[i]))
+  }
+}
+function isArrayUnique(array) {
+  const set = new Set(array);
+  return set.size === array.length;
+}
 
-sudokuChecker(sudoku);
+
+sudokuRowChecker(sudoku);
 
 
 // console.log(sudoku[0][0])
